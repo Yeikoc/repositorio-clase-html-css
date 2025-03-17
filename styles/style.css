@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+
+    --color-primario: #000000;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4FD;
+    --color-hover: #272727;
+
+    /* probando colores */
+    /* --color-primario: #5F5D9C;
+    --color-secundario: #6196A6;
+    --color-terciario: #A4CE95;
+    --color-hover: #272727; */
+    
+    --fuente-montserrat: 'Montserrat', sans-serif;
+    --fuente-krona: 'Krona One', sans-serif;
+}
+
+/* cambiamos en Box Model - Reset CSS*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    box-sizing: border-box;
+    
+    /* background-color: #000000;
+    color: #f6f6f6; */ /*se reemplazo por variables creadas en root*/
+
+    /* usando variables que se creo en root */
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+
+    /*   height: 100vh; /* 100% de la altura de la ventana v = viewport */  
+}
+
+.header{
+    padding: 2% 0% 0% 15%; /* 2% arriba, 0% derecha, 0% abajo, 15% izquierda */
+}
+
+.header__menu{
+    display: flex; /*Para que los elementos se alineen en fila*/
+    gap: 80px; /*Espacio entre elementos*/
+}
+
+.header__menu__link{
+    /* font-family: "Montserrat", sans-serif; /*Fuente de la letra - se reemplazo por variable --fuente*/
+    font-family: var(--fuente-montserrat); /* usando variable --fuente */
+
+    /*cambiando lo px por rem - 1rem = 16px*/
+    /*font-size: 24px; /*Tamaño de la letra*/
+    font-size: 1.5rem; 
+    
+    font-weight: 600; /*Grosor de la letra*/
+    /* color: #22D4FD; /*Color de la letra - se reemplazo por variable --color-terciario*/
+    color: var(--color-terciario); /*Color de la letra */
+    text-decoration: none; /*Quitar subrayado del texto*/
+}
+
+.presentacion{
+    /* margin: 10% 15%; /*Margen arriba y abajo 10% y a los lados 15%*/
+    padding: 5% 15%; /*Padding arriba y abajo 5% y a los lados 15%*/
+    
+    display: flex; /*Para que los elementos se alineen en fila*/
+    align-items: center; /*Centrado vertical*/
+    justify-content: space-between; /*Espacio entre elementos*/
+    gap: 82px; /*Espacio entre elementos*/
+}
+
+.presentacion__contenido{
+    /* width: 615px; /*Ancho del contenedor*/ /*Cambiamos a porcentajes*/
+    width: 50%; /*Ancho del contenedor*/
+
+    display: flex; /*Para que los elementos se alineen en fila*/
+    flex-direction: column; /*Para que los elementos se alineen en columna*/
+    gap: 40px; /*Espacio entre elementos*/
+}
+
+.presentacion__contenido__titulo{
+    /*cambiando lo px por rem - 1rem = 16px*/
+    /*font-size: 36px; /*Tamaño de la letra*/
+    font-size: 2.25rem; 
+    
+    /* font-family: "Krona One", sans-serif; /*Fuente de la letra - se reemplazo por variable --fuente-krona */
+    font-family: var(--fuente-krona); /* usando variable --fuente-krona */
+}
+
+.titulo-destaque{
+    /* color: #22D4FD; /*Color de la letra - se reemplazo por variable --color-terciario */
+    color: var(--color-terciario); /*Color de la letra */
+}
+
+.presentacion__contenido__texto{
+    /*cambiando lo px por rem - 1rem = 16px*/
+    /*font-size: 24px; /*Tamaño de la letra*/
+    font-size: 1.5rem; 
+    
+    /* font-family: "Montserrat", sans-serif; /*Fuente de la letra - se reemplazo por variable --fuente */
+    font-family: var(--fuente-montserrat); /* usando variable --fuente */
+}
+
+.presentacion__enlaces{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion__enlaces__subtitulo{
+    /* font-family: "Krona One", sans-serif; /*Fuente de la letra - se reemplazo por variable --fuente-krona */
+    font-family: var(--fuente-krona); /* usando variable --fuente-krona */
+
+    font-weight: 400; /*Grosor de la letra*/
+
+    /*cambiando lo px por rem - 1rem = 16px*/
+    /*font-size: 24px; /*Tamaño de la letra*/
+    font-size: 1.5rem; 
+}
+
+/* Manejo de los botones */ 
+.presentacion__enlaces__link{
+    display: flex; /* Para que los elementos se alineen en fila */
+    justify-content: center; /*Centrado horizontal*/
+    gap: 16px; /*Espacio entre elementos*/
+    
+    /* border: 2px solid #22D4FD; /*Borde de 2px de color azul*/ /*se reemplazo por variable --color-terciario*/
+    border: 2px solid var(--color-terciario); /*Borde de 2px de color azul*/
+
+    /* width: 378px; /*Ancho del botón*/ /*cambiando a porcentajes*/
+    width: 50%; /*Ancho del botón*/
+
+    text-align: center; /*Centrado horizontal*/
+    border-radius: 8px; /*Borde redondeado*/
+    
+    /*cambiando lo px por rem - 1rem = 16px*/
+    /*font-size: 24px; /*Tamaño de la letra*/
+    font-size: 1.5rem; 
+    
+    font-weight: 600; /*Grosor de la letra*/
+    padding: 21.5px 0; /*Espacio interno del botón*/
+    text-decoration: none; /*Quitar subrayado del texto*/
+    
+    /* color: #000000; */
+    /* color: #F6F6F6; /*Color de la letra*/ /*se reemplazo por variable --color-secundario*/
+    color: var(--color-secundario); /*Color de la letra */
+    
+    /* font-family: "Montserrat", sans-serif; /*Fuente de la letra*/ /*se reemplazo por variable --fuente*/
+    font-family: var(--fuente-montserrat); /* usando variable --fuente */   
+}
+
+/* Manejo de los botones al pasar el mouse */
+.presentacion__enlaces__link:hover{
+    /* background-color: #272727; se reemplavo por variable --color-hover*/
+    background-color: var(--color-hover); /*Color de fondo al pasar el mouse */
+}
+
+.presentacion__imagen{
+    width: 50%; /*Ancho de la imagen*/
+}
+
+.footer{
+    /* background-color: #22D4FD; se reemplazo por variable --color-terciario */
+    background-color: var(--color-terciario); /*Color de fondo*/
+    padding: 24px 0; /* 24px arriba y abajo y 0 a los lados */
+    /* color: #000000; /*Color de la letra*/ /*se reemplazo por variable --color-primario*/
+    color: var(--color-primario); /*Color de la letra */
+    text-align: center; /*Centrado horizontal*/
+    /* font-family: "Montserrat", sans-serif; /*Fuente de la letra*/ /*se reemplazo por variable --fuente*/
+    font-family: var(--fuente-montserrat); /* usando variable --fuente-montserrat */
+    /*cambiando lo px por rem - 1rem = 16px*/
+    /*font-size: 24px; /*Tamaño de la letra*/
+    font-size: 1.5rem; 
+    font-weight: 400; /*Grosor de la letra*/
+}
+
+@media (max-width: 1200px){
+    .header{
+        padding: 10%; /* 10% arriba */
+    }
+
+    .header__menu{
+        justify-content: center; /*Centrado horizontal*/
+    }
+
+    .presentacion{
+        flex-direction: column-reverse; /*Para que los elementos se alineen en columna y la imagen quede abajo*/  
+        padding: 5%; /* 5% arriba y abajo y a los lados */
+    }
+
+    .presentacion__contenido{
+        width: auto; /*Ancho del contenedor*/
+        
+        /* Aplicando el 100%  en el ancho de la pagina responsive, se obtiene el mismo resultado que con width: auto; */
+        /* Y se justara automaticamente al tamaño de la pantalla (para la version movil)
+        width: 100%; /*Ancho del contenedor*/ 
+        
+    }
+} 
